@@ -7,9 +7,27 @@
   font-family: "Gotham";
   color: #252733;
   padding: 0.5rem;
-  .page {
-    font-size: 1.2rem;
-    font-weight: 800;
+
+  .header_right {
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  .header_left {
+    .name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        color: var(--secondary);
+      }
+    }
   }
 
   .right {
@@ -26,7 +44,7 @@
       border-radius: 2rem;
       height: 3rem;
       width: 8rem;
-      color: #ff9c41;
+      color: var(--secondary);
       font-style: Gotham;
       font-weight: 800;
       gap: 0.2rem;

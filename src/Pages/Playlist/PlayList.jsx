@@ -1,9 +1,8 @@
 import React from "react";
 import { Navbar } from "../../components/Navbar";
-import { SideBar } from "./../../components/SideBar";
-import "./../../Style/homepage.scss";
+import { SideBar } from "../../components/SideBar";
 
-export const HomePage = () => {
+export const PlayList = () => {
   return (
     <div className="container">
       <div className="container">
@@ -12,7 +11,7 @@ export const HomePage = () => {
         </div>
         <div className="navbar_and_content_container">
           <Navbar />
-          HELLO
+          Playlist
         </div>
       </div>
     </div>

@@ -12,52 +12,46 @@ export const SideBar = () => {
   const logoHandler = () => {
     navigate("/");
   };
-  const modalClickHandler = () => {
-    // setModalView(true);
-  };
+
   return (
     <aside className="sidebar_container">
       <div className="logo_container" onClick={logoHandler}>
         <div className="logo">
-          <h1 className="brand_message">CodeThooB</h1>
+          <h1 className="brand_message"></h1>
         </div>
       </div>
 
       <div className="items">
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
-          to="/"
+          to="/playlist"
         >
           <PlaylistPlayIcon />
           Playlist
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
-          to="/"
+          to="/liked"
         >
           <ThumbUpIcon />
           Liked Videos
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
-          to="/"
+          to="/watchlater"
         >
           <WatchLaterIcon />
           Watch Later
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
-          to="/"
+          to="/history"
         >
           <HistoryIcon />
           History
         </NavLink>{" "}
       </div>
-      <div className="btn_container">
-        <div className="brand_message">
-          <h3>Learn Coding Fun WaY!</h3>
-        </div>
-      </div>
+      <div className="brand_message"></div>
     </aside>
   );
 };

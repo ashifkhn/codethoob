@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import "./style/navbar.scss";
-import FireCoin from "./../assets/fire-coin.svg";
-import { useCoin } from "../context/Context";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
 
-export const Navbar = (props) => {
+export const Navbar = () => {
   let navigate = useNavigate();
-  const { coin } = useCoin();
   const [log, setLog] = useState(false);
 
   const Handler = () => {
@@ -19,14 +16,12 @@ export const Navbar = (props) => {
   };
   return (
     <div className="navbar_container">
-      <div className="page_title">{props.name}</div>
-      <div className="right">
-        <div className="coins">
-          <img src={FireCoin} alt="" />
-          <div>{coin}</div>
-        </div>
+      <div className="header_left">
+        <button className="name">CodeThoob</button>
+      </div>
+      <div className="header_right">
         <div className="icons">
-          <div>Karan Hooda</div>
+          <div>Name</div>
           <div className="image_user">
             <AccountCircleIcon
               onClick={Handler}
